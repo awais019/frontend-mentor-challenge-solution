@@ -106,14 +106,36 @@ body {
 }
 
 .result-summary {
+  --padding: 2.5rem;
+  --border-radius: 2rem;
   max-width: 46rem;
   display: grid;
 }
 
+.results,
+.summary {
+  padding: var(--padding);
+}
+
 @media (min-width: 600px) {
   .result-summary {
+    margin-inline: 1rem;
     grid-template-columns: 1fr 1fr;
-    border-radius: 2rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
     box-shadow: 0.5rem 1rem 3rem hsl(var(--clr-neutral-hsl-700), 0.2);
+  }
+}
+
+.results {
+  color: hsl(var(--clr-neutral-hsl-100), 0.7);
+  text-align: center;
+  background: var(--gradient-primary);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+@media (min-width: 600px) {
+  .results {
+    border-radius: var(--border-radius);
   }
 }
