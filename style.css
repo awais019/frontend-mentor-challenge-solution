@@ -139,3 +139,37 @@ body {
     border-radius: var(--border-radius);
   }
 }
+
+.grid-flow {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.grid-flow[data-spacing="large"] {
+  gap: 2rem;
+}
+
+.result-score {
+  display: grid;
+  place-content: center;
+  width: 12rem;
+  margin-inline: auto;
+  background: var(--gradient-to-transparent);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.result-score span {
+  display: block;
+  font-size: var(--fs-900);
+  font-weight: var(--fw-black);
+  line-height: 1;
+  color: var(--clr-neutral-100);
+}
+
+.result-rank {
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+}
